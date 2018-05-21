@@ -1,0 +1,73 @@
+<?php
+
+namespace BusinessLogic\Emails;
+
+
+use BusinessLogic\Tickets\Attachment;
+use BusinessLogic\Tickets\Ticket;
+use Mailgun\Mailgun;
+
+class MailgunEmailSender extends \BaseClass implements EmailSender {
+    function sendEmail($emailBuilder, $heskSettings, $modsForHeskSettings, $sendAsHtml) {
+        $mailgunArray = array();
+
+        $mailgunArray['from'] = $heskSettings['noreply_mail']; // Email Address
+        if ($heskSettings['noreply_name'] !== null && $heskSettings['noreply_name'] !== '') {
+            $mailgunArray['from'] = "{$heskSettings['noreply_name']} <{$heskSettings['noreply_mail']}>"; // Name and address
+        }
+
+        $mailgunArray['to'] = implode(',', $emailBuilder->to);
+
+        if ($emailBuilder->cc !== null && count($emailBuilder->cc) > 0) {
+            $mailgunArray['cc'] = implode(',', $emailBuilder->cc);
+        }
+
+        if ($emailBuilder->bcc !== null && count($emailBuilder->bcc) > 0) {
+            $mailgunArray['bcc'] = implode(',', $emailBuilder->bcc);
+        }
+
+        $mailgunArray['subject'] = $emailBuilder->subject;
+        $mailgunArray['text'] = $emailBuilder->message;
+
+        if ($sendAsHtml) {
+            $mailgunArray['html'] = $emailBuilder->htmlMessage;
+        }
+
+        $mailgunAttachments = array();
+        if ($emailBuilder->attachments !== null) {
+            foreach ($emailBuilder->attachments as $attachment) {
+                $mailgunAttachments[] = array(
+                    'remoteName' => $attachment->fileName,
+                    'filePath' => __DIR__ . '/../../../' . $heskSettings['attach_dir'] . '/' . $attachment->savedName
+                );
+            }
+        }
+
+        $result = $this->sendMessage($mailgunArray, $mailgunAttachments, $modsForHeskSettings);
+
+
+        if (isset($result->http_response_code)
+            && $result->http_response_code === 200) {
+            return true;
+        }
+
+        return $result;
+    }
+
+    private function sendMessage($mailgunArray, $attachments, $modsForHeskSettings) {
+        $ssl = !defined('NO_MAILGUN_SSL');
+
+        $messageClient = new Mailgun($modsForHeskSettings['mailgun_api_key'], 'api.mailgun.net', 'v2', $ssl);
+
+        $mailgunAttachments = array();
+        if (count($attachments) > 0) {
+            $mailgunAttachments = array(
+                'attachment' => $attachments
+            );
+        }
+
+        $result = $messageClient->sendMessage($modsForHeskSettings['mailgun_domain'], $mailgunArray, $mailgunAttachments);
+
+        return $result;
+    }
+}

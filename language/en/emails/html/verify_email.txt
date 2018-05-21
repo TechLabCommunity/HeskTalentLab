@@ -1,0 +1,7 @@
+Caro %%NAME%%,
+La tua email dev'essere verificata prima che tu possa inserire un ticket. Clicca sul seguente link per confermare la tua email.
+
+%%VERIFYURL%%
+
+%%SITE_TITLE%%
+%%SITE_URL%%

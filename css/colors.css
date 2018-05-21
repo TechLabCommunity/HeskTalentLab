@@ -1,0 +1,75 @@
+.white {
+    color: #fff;
+}
+
+.black {
+    color: #000;
+}
+
+.red,
+.important {
+    color: red;
+}
+
+.green {
+    color: green;
+}
+
+.orange,
+.rating {
+    color: orange;
+}
+
+.medium {
+    color: #FF9900;
+}
+
+.gray {
+    color: grey;
+}
+
+.critical {
+    color: #9400d3;
+}
+
+.blue {
+    color: blue;
+}
+
+.navy-blue {
+    color: #3c8dbc;
+}
+
+.critical-priority {
+    background-color: #9400d3;
+}
+
+.med-low-priority,
+.medium-priority {
+    background-color: #8BB467;
+}
+
+.low-priority {
+    background-color: blue;
+}
+
+.high-priority {
+    background-color: #ff6a00;
+}
+
+/* Hover colors */
+.red-on-hover:hover {
+    color: red;
+}
+
+.gray-on-hover:hover {
+    color: grey;
+}
+
+tr.critical-row > td, td.critical-row {
+    background: #f5e6fb;
+}
+
+tr:hover > .critical-row, tr > td.critical-row:hover {
+    background: #edd4f8;
+}

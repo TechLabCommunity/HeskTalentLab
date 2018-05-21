@@ -1,0 +1,372 @@
+.navbar-nav > .messages-menu > .dropdown-menu >li .menu > li > a,
+.sidebar-menu, .main-sidebar .user-panel, .sidebar-menu > li.header{
+    white-space: normal;
+}
+
+.icon-link {
+    font-size: 16px; !important;
+}
+
+.linkless-dropdown {
+    display: block;
+    padding: 3px 20px;
+    clear: both;
+    font-weight: normal;
+    line-height: 1.42857143;
+    white-space: nowrap;
+}
+
+.dropdown-menu>li>span>.fa {
+    margin-right: 10px;
+}
+
+.no-margins {
+    margin: 0;
+}
+
+@media (max-width: 991px) {
+    .ticket-cell-admin {
+        border-bottom: solid 1px #ddd;
+        border-right: 0;
+        padding-top: 5px;
+        height: 100px;
+    }
+}
+
+@media (min-width: 992px) {
+    .ticket-cell-admin {
+        border-bottom: 0;
+        border-right: solid 1px #ddd;
+        margin-top: 1px;
+        height: 100px;
+        padding-top: 10px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .navbar-collapse.pull-left + .navbar-custom-menu {
+        position: relative;
+    }
+}
+
+@media (max-width: 767px) {
+    body.layout-top-nav .navbar-collapse.pull-left + .navbar-custom-menu {
+        margin-top: 50px;
+    }
+}
+
+@media (max-width: 767px) {
+    #header-right-side .navbar-nav .dropdown-menu li a {
+        color: #777;
+    }
+}
+
+@media (max-width: 767px) {
+    #header-right-side .navbar-nav .dropdown-menu li a:hover,
+    #header-right-side .navbar-nav .dropdown-menu li a:focus {
+        color: #262626;
+        text-decoration: none;
+        background-color: #f5f5f5;
+    }
+}
+
+.ticket-property-title {
+    color: rgba(255, 255, 255, .75);
+    font-size: 11px;
+    text-transform: uppercase;
+}
+
+@media (min-width: 992px) {
+    .ticketPropertyText {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+    .ticketPropertyText:hover {
+        white-space: normal;
+        overflow: visible;
+    }
+}
+
+.ticketPropertyText {
+    font-size: 16px;
+    line-height: 1em;
+    color: #fff;
+    padding-bottom: 2px;
+}
+
+.status-row {
+    margin-bottom: 20px;
+}
+
+.push-down-10 {
+    margin-top: 10px;
+}
+
+.dropdown-empty {
+    padding: 10%;
+    color: #ddd;
+    font-weight: bolder;
+}
+
+
+.attachment-table > tbody > tr > td > a > i,
+.attachment-table > tbody > tr > td > i,
+.dropdown-empty > i {
+    color: #ddd;
+    text-shadow: 2px 2px #ccc;
+}
+
+.attachment-table > tbody > tr > td {
+    vertical-align: middle;
+}
+
+.attachment-table > tbody > tr > td > a > img {
+    max-height: 80px;
+    max-width: 80px;
+    cursor: pointer;
+}
+
+.note {
+    border-bottom: solid 1px #000;
+}
+
+.fileinput-button {
+    width: 100%;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    margin-top: -2px;
+}
+
+.file-row p.name {
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.timeline-footer {
+    border-top: 1px solid #f4f4f4;
+}
+
+.timeline > .today-top {
+    margin-bottom: 60px;
+}
+
+.white-readonly {
+    cursor: text !important;
+    background-color: #fff !important;
+}
+
+button.dropdown-submit {
+    background: none !important;
+    border: none;
+}
+
+.form-signin {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.loginError {
+    padding-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.login-box {
+    width: 35%;
+    min-width: 350px;
+}
+
+.installer-login-box {
+    width: 50%;
+    min-width: 350px;
+}
+
+.login-box-container {
+    position: relative;
+}
+
+.login-box-background {
+    /* Absolutely position it, but stretch it to all four corners, then put it just behind #search's z-index */
+    /* background is handled in the header logic */
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 99;
+
+    /* Pull the background 70px higher to the same place as #bg's */
+    /*background-position: center -70px;*/
+
+    -webkit-filter: blur(10px);
+    /*filter: url('/media/blur.svg#blur');*/
+    filter: blur(10px);
+}
+
+.login-box-body {
+    position: relative;
+    box-shadow: 0 0 50px 5px rgba(0,0,0,0.3),
+                0 0 5px -1px white;
+    background: rgb(255, 255, 255);
+    background: rgba(255, 255, 255, .75);
+    border-radius: 5px;
+    z-index: 100;
+}
+
+.button-link {
+    color: #4a5571;
+}
+
+.button-link:hover {
+    text-decoration: none;
+    color: #000;
+}
+
+.button-link .col-xs-1 {
+    margin: 0 auto;
+    padding: 0;
+}
+
+.button-link .panel-body:hover {
+    background-color: #EEE;
+}
+
+.button-link .danger {
+    background-color: #ffe6e6;
+    color: #f00;
+}
+
+.button-link .danger:hover {
+    background-color: #ffcccc;
+}
+
+.button-link .warning {
+    background-color: #fcf8e3;
+    color: #8a6d3b;
+ }
+
+ .button-link .warning:hover {
+    background-color: #faf2cc;
+ }
+
+.timeline-header {
+    background: #ddd;
+    border-left: solid 1px #ddd;
+    border-right: solid 1px #ddd;
+}
+
+.timeline-header.header-info {
+    background: #fff;
+    font-size: 14px !important;
+}
+
+.timeline-footer, .timeline-body {
+    border-left: solid 1px #ddd;
+    border-right: solid 1px #ddd;
+}
+
+.ticket-message-bottom {
+    border-bottom: solid 1px #ddd;
+}
+
+.box-warning .box-body {
+    background: #fdebcf;
+}
+
+.box-warning .box-body hr {
+    border-top: 1px solid #f39c12;
+}
+
+#noteform {
+    background: white;
+    margin: 10px -10px -10px;
+    padding: 10px;
+}
+
+#noteform > h3 {
+    padding-bottom: 10px;
+    border-bottom: solid 1px #000;
+}
+
+.full-width {
+    width: 100%;
+}
+
+.dropdown-title {
+    padding: 3px 20px;
+}
+
+div.ticket-info {
+    border-left: 3px solid transparent;
+    color: #b8c7ce;
+    padding: 12px 5px 12px 15px;
+    display: block;
+}
+
+[class*="-light"] div.ticket-info {
+    color: #444;
+}
+
+.event-category[data-checked="0"] {
+    background: #777 !important;
+    border: none !important;
+    color: #aaa !important;
+}
+
+.event-category:hover {
+    border: solid 1px #fff !important;
+    cursor: pointer;
+}
+
+.anchor {
+    padding-top: 50px;
+    height: 0;
+    width: 0;
+    overflow:hidden;
+}
+
+.box-header h1.box-title {
+    width: 100%;
+    cursor: pointer;
+}
+
+.black {
+    color: black;
+}
+
+#toast-container > div {
+    opacity: 1;
+}
+
+.generate-link-button {
+    padding: 0;
+    border: 0;
+}
+
+.generate-link-button.button > button {
+    border-radius: 0;
+}
+
+.bootstrap-select .btn-default {
+    background-color: #fff;
+    border-radius: 0;
+}
+
+.bootstrap-select .btn-default:hover,
+.bootstrap-select .btn-default:active {
+    background-color: #fff;
+}
+
+.bootstrap-select .btn-default:focus {
+    background-color: #fff;
+    border-color: #3c8dbc;
+    box-shadow: none;
+    outline: 0;
+}
+
+.timeline > li > .timeline-item > .timeline-header.audit-record {
+    font-size: 12px;
+    border-bottom: none;
+}

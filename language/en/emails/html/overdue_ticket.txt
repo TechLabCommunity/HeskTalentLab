@@ -1,0 +1,15 @@
+Ciao,
+
+Un ticket sta per scadere! I Dettagli:
+A ticket is overdue! Ticket details:
+
+Titolo del ticket: %%SUBJECT%%
+Tracking ID: %%TRACK_ID%%
+
+Puoi gestire il ticket a questo link:
+%%TRACK_URL%%
+
+%%SITE_TITLE%%
+%%SITE_URL%%
+
+%%MESSAGE%%

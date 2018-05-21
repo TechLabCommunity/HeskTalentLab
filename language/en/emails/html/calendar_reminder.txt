@@ -1,0 +1,7 @@
+Un evento sta per cominciare!
+----
+Tutolo: %%TITLE%%
+Luogo: %%LOCATION%%
+Categoria:%%CATEGORY%%
+Quando: %%WHEN%%
+Commenti: %%COMMENTS%%

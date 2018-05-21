@@ -1,0 +1,138 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="it" lang="it">
+  <head>
+    <title>Guida interattiva alle impostazioni di Hesk</title>
+    <meta http-equiv="content-type" content="application/xhtml+xml; charset=utf-8" />
+    <link href="help_style.css" type="text/css" rel="stylesheet" />
+  </head>
+  <body>
+    <!-- next: 60 -->
+    <h3>Guida interattiva alle impostazioni di Hesk</h3>
+    <p>&nbsp;</p>
+    <a name="18"></a>
+    <p class="title">Scostamento dal Time server</p>
+    <p>Se il vostro Time server differisce dal vostro orario locale, è possibile configurare a    questo livello tale differenza di orario.<br />
+      Per esempio:<br />
+      Time server: 12:30 - Orario locale: 13:30 - Configurare le ore a <b>1</b>
+      e i minuti a <b>0</b><br />
+      Time server: 12:30 - Orario locale: 14:45 - Configurare le ore a <b>2</b>
+      e i minuti a <b>15</b><br />
+      Time server: 12:30 - Orario locale: 09:30 - Configurare le ore a <b>-3</b>
+      e i minuti a <b>0</b><br />
+      Time server: 12:30 - Orario locale: 11:00 - Configurare le ore a <b>-1</b>
+      e i minuti a <b>-30</b></p>
+    <a name="19"></a>
+    <p class="title">Ora legale (DST)</p>
+    <p>Selezionare <strong>SÌ</strong> se il vostro paese usa l'ora legale.
+      Selezionare <strong>NO</strong> per disbilitare l'ora legale.<br />
+      <strong><u>ATTENZIONE</u></strong>: Non attivare questa opzione se il
+      vostro Time server effettua già la correzione relativa all'ora legale!
+    </p>
+    <p>&nbsp;</p>
+    <p align="center"><a href="#" onclick="Javascript:window.close()">Chiudi la
+        finestra</a></p>
+    <p>&nbsp;</p>
+    <a name="20"></a>
+    <p class="title">Formato ora</p>
+    <p>Per visualizzare gli orari, Hesk usa la sintassi del PHP.</p>
+    <p><strong><span class="wrong">Questa prevede l'utilizzo di un solo 
+          spazio per separare data e orario. Hesk infatti usa lo spazio per
+          spezzare in due linee la data e l'orario!</span></strong></p>
+    <p>Per una descrizione completa della sintassi si veda la sezione del <a href="http://php.net/date"
+        target="_blank">Manuale di PHP</a> riguardante le <i><b>date</b></i>.
+      Qui sotto si riporta qualche esempio di uso comune:</p>
+    <table cellspacing="0" cellpadding="4" border="1">
+      <tbody>
+        <tr>
+          <td><b><i>Impostazione</i></b></td>
+          <td><b><i>Risultato</i></b></td>
+        </tr>
+        <tr>
+          <td><b>Y-m-d H:i:s</b></td>
+          <td>2012-12-31 14:35:53</td>
+        </tr>
+        <tr>
+          <td><b>d/m/Y H:i:s</b></td>
+          <td>31/12/2012 14:35:53</td>
+        </tr>
+        <tr>
+          <td><b>m-d-Y H:i:s</b></td>
+          <td>12-31-2012 14:35:53</td>
+        </tr>
+        <tr>
+          <td><b>j-M-Y H:i:s</b></td>
+          <td>31-Dic-2012 14:35:53</td>
+        </tr>
+        <tr>
+          <td><b>j-M-Y g:ia</b></td>
+          <td>31-Dic-2012 2:35pm</td>
+        </tr>
+      </tbody>
+    </table>
+    <p>&nbsp;</p>
+    <p align="center"><a href="#" onclick="Javascript:window.close()">Chiudi la
+        finestra</a></p>
+    <p>&nbsp;</p>
+    <a name="61"></a>
+    <p class="title">IP WHOIS</p>
+    <p>Si tratta dell'URL del servizio utilizzato per effettuare la ricerca
+      dell'IP di provenienza del ticket (Servizio <b>WHOIS</b>).</p>
+    <p>La variabile <b>{IP}</b> viene sostituita dall'effettivo indirizzo IP
+      del cliente.</p>
+    <p>Valore predefinito: http://whois.domaintools.com/{IP}</p>
+    <p>&nbsp;</p>
+    <p align="center"><a href="#" onclick="Javascript:window.close()">Chiudi la
+        finestra</a></p>
+    <p>&nbsp;</p>
+    <a name="62"></a>
+    <p class="title">Modalità di manutenzione</p>
+    <p>Pone il sistema di Helpdesk in modalità di manutenzione.</p>
+    <p>In questa modalità i clienti non possono utilizzare nessuna funzionalità
+      del servizio di Helpdesk a differenza degli operatori dello staff che
+      invece possono accedere e usare normalmente l'Helpdesk.</p>
+    <p><b>Nota:</b> La modalità di manutenzione viene attivata automaticamente
+      se in Hesk è presente la cartella <b>/install</b>.</p>
+    <p><b>Importante:</b> Il "<em>POP3 fetching</em>" non è attivo in modalità
+      di manutenzione, a differenza dell' "<em>Email piping</em>". In questo modo
+      si evita la perdita di messaggi di email da parte dei clienti.</p>
+    <p>&nbsp;</p>
+    <p align="center"><a href="#" onclick="Javascript:window.close()">Chiudi la
+        finestra</a></p>
+    <p>&nbsp;</p>
+    <a name="21"></a>
+    <p class="title">Link all'area amministrativa</p>
+    <p>Se questa voce è selezionata, in fondo alla <a href="../" target="_blank">pagina
+        principale</a> del vostro Helpdesk viene visualizzato un link al
+      Pannello di amministrazione.</p>
+    <a name="48"></a>
+    <p class="title">Invia avviso</p>
+    <p>Se questa voce è selezionata, il modulo di <i>Invio ticket</i> mostra in
+      basso un avviso che chiede al cliente di effettuare un controllo rigoroso
+      riguardante le informazioni inserite nel ticket e che lo informa che, per
+      motivi di sicurezza, l'indirizzo IP da cui viene inviato il ticket, viene
+      registrato.</p>
+    <p>&nbsp;</p>
+    <p align="center"><a href="#" onclick="Javascript:window.close()">Chiudi la
+        finestra</a></p>
+    <p>&nbsp;</p>
+    <a name="56"></a>
+    <p class="title">Operatori online</p>
+    <p>Se questa voce è selezionata, Hesk mostra in basso, sulla pagina
+      dell'Helpdesk, l'elenco degli operatori di staff online negli ultimi <b><i>N</i></b>
+      minuti. Tale informazione risulta visibile solo agli altri operatori dello
+      staff.</p>
+    <a name="59"></a>
+    <p class="title">Aggiornamenti</p>
+    <p>Se questa voce è selezionata, ogni volta che si apre la pagina delle
+      impostazioni, Hesk controlla automaticamente la presenza di eventuali
+      aggiornamenti.</p>
+    <p>Perché il controllo automatico funzioni è necessario che il server sia
+      connesso ad internet e che sia abilitata la funzione <i>cURL</i> o <i>allow_url_fopen</i>.</p>
+    <p>Se questa voce è disabilitata o le funzioni richieste sono assenti,
+      compare il link "Controlla aggiornamenti" che, opportunamente selezionato,
+      consente di effettuare un controllo manuale.</p>
+    <p>&nbsp;</p>
+    <p align="center"><a href="#" onclick="Javascript:window.close()">Chiudi la
+        finestra</a></p>
+  </body>
+</html>

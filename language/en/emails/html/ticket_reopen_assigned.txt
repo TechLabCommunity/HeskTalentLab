@@ -1,0 +1,13 @@
+Ciao,
+
+Un ticket a te assegnato è stato riaperto.
+
+%%NAME%% ha appena riaperto il ticket "%%SUBJECT%%".
+
+Tracking ID: %%TRACK_ID%%
+
+Puoi gestire il ticket a questo link:
+%%TRACK_URL%%
+
+%%SITE_TITLE%%
+%%SITE_URL%%
